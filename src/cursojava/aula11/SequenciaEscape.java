@@ -1,4 +1,4 @@
-package curso.aula11;
+package cursojava.aula11;
 
 public class SequenciaEscape {
     public static void main(String[] args){
