@@ -9,6 +9,6 @@ public class CurtoCircuito {
         System.out.println(resultado1);
         System.out.println(resultado2);
 
-    
+
     }
 }
