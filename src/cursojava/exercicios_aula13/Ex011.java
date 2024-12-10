@@ -18,7 +18,7 @@ public class Ex011 {
         System.out.println("Digite um número real qualquer: ");
         float n3 = valor.nextFloat();
 
-        int itemA = (2 * n1) + (n2 / 2);
+        int itemA = (2 * n1) * (n2 / 2);
 
         float itemB = (n1 * 3) + n3;
 
