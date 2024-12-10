@@ -11,7 +11,8 @@ public class Ex007 {
         float lado = valor.nextFloat();
         double area = Math.pow(lado, 2);
         System.out.printf("O quadrado possui lados iguais a %.2f. " +
-                "Portanto a sua área é igual a %.2f metros²", lado, area);
+                "Portanto a sua área é igual a %.2f metros²\n", lado, area);
+        System.out.printf("E O dobro dessa área é de %.2f", area * 2);
 
 
     }
