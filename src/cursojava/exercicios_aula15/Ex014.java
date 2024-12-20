@@ -14,5 +14,26 @@ public class Ex014 {
 
         Scanner dados = new Scanner(System.in);
         System.out.println("Digite sua n1: ");
+        float n1 = dados.nextFloat();
+        System.out.println("Digite a sua n2: ");
+        float n2 = dados.nextFloat();
+        double media = (n1 + n2) / 2;
+
+        if (media >= 9 && media <= 10) {
+            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = A\nSituação = Aprovado", n1, n2, media);
+        }
+        else if (media >= 7.5 && media < 9) {
+            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = B\nSituação = Aprovado", n1, n2, media);
+        }
+        else if (media >= 6 && media < 7.5) {
+            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = C\nSituação = Aprovado", n1, n2, media);
+        }
+        else if (media >= 4 && media < 6) {
+            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = D\nSituação = Reprovado", n1, n2, media);
+        }
+        else {
+            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = E\nSituação = Reprovado", n1, n2, media);
+        }
+
     }
 }
