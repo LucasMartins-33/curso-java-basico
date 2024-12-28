@@ -5,38 +5,60 @@ public class Ex024 {
     public static void main(String[] arg) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Digite um número: ");
+        System.out.println("n1: ");
         double n1 = scan.nextDouble();
 
-        System.out.println("Digite um segundo número: ");
+        System.out.println("n2: ");
         double n2 = scan.nextDouble();
 
-        System.out.println("qual operação você quer realizar? [Soma / Subtração / Multiplicação / Divisão]");
-        String resposta = scan.next();
+        System.out.println("Escolha uma das opções: ");
+        System.out.println("1 - Soma");
+        System.out.println("2 - Subtração");
+        System.out.println("3 - Multiplicação");
+        System.out.println("4 - Divisão");
+        int opcao = scan.nextInt();
 
-        if(resposta.equalsIgnoreCase("Soma")){
-            double soma = n1 + n2;
-            System.out.printf("A soma dos números %.1f + %.1f é igual à %.1f ", n1, n2, soma);
+        double resultado = 0;
+        boolean opcaoValida = true;
+
+        switch (opcao) {
+            case 1:
+                resultado = n1 + n2;
+                break;
+
+            case 2:
+                resultado = n1 - n2;
+                break;
+
+            case 3:
+                resultado = n1 * n2;
+                break;
+
+            case 4:
+                if(n2 != 0) {
+                    resultado = n1 / n2;
+                }
+                else {
+                    System.out.println("Erro: divisão por zero. ");
+                    opcaoValida = false;
+                }
+                break;
+
+            default:
+                System.out.println("Opção inválida. ");
+                opcaoValida = false;
         }
 
-        else if (resposta.equalsIgnoreCase("Subtração")) {
-            double sub = n1 - n2;
-            System.out.printf("A subtração dos números %.1f - %.1f é igual à %.1f ", n1, n2, sub);
-        }
+        if(opcaoValida) {
+            String parOuImpar = (resultado % 2 == 0 ? "Par" : "Impar");
 
-        else if (resposta.equalsIgnoreCase("Multiplicação")) {
-            double mult = n1 * n2;
-            System.out.printf("A multiplicação dos números %.1f x %.1f é igual à %.1f ", n1, n2, mult);
-        }
+            String positivoOuNegativo = (resultado >= 0 ? "Positivo" : "Negativo");
 
-        else if (resposta.equalsIgnoreCase("Divisão")) {
-            double div = n1 / n2;
-            System.out.printf("A soma dos números %.1f / %.1f é igual à %.1f ", n1, n2, div);
-        }
+            String inteiroOuDecimal = (resultado == Math.floor(resultado)) ? "Inteiro" : "Decimal";
 
-        else {
-            System.out.println("Opção inválida! ");
+            System.out.printf("O resultado da operação foi %.1f ", resultado);
+            System.out.printf("Esse valor é: %s, %s e %s", parOuImpar, positivoOuNegativo, inteiroOuDecimal);
         }
-
+        scan.close();
     }
 }
