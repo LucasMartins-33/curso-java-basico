@@ -39,7 +39,7 @@ public class ex026 {
             }
 
             else {
-                
+
                 double descontoGasolina6 = (litroGasolina * 2.5) * 0.94;
                 System.out.printf("Para abastercer %d litros você vai pagar R$ %.2f ", litroGasolina, descontoGasolina6);
             }
