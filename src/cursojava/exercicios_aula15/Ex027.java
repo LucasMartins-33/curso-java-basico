@@ -20,12 +20,18 @@ public class Ex027 {
             }
 
             else if (kgMorango > 5) {
+                // Calculo do valor sem o desconto
                 double valorMorango = kgMorango * 2.2;
-                System.out.printf("%.1f kg de morango custa R$ %.2f", kgMorango, valorMorango);
 
+                // Valor com desconto
                 if(kgMorango > 8 || valorMorango > 25) {
                     double desconto = (valorMorango * 0.9);
                     System.out.printf("%.2f kg de morango custa R$ %.2f", kgMorango, desconto);
+                }
+
+                // Valor sem desconto
+                else {
+                    System.out.printf("%.1f kg de morango custa R$ %.2f", kgMorango, valorMorango);
                 }
             }
 
