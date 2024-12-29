@@ -34,12 +34,29 @@ public class Ex027 {
                     System.out.printf("%.1f kg de morango custa R$ %.2f", kgMorango, valorMorango);
                 }
             }
-
-
         }
 
         else if (opcao == 2) {
             System.out.println("Quantos kg você quer de maçã?");
+            double kgMaca = scan.nextFloat();
+
+            if(kgMaca <= 5) {
+                double valorMaca = 1.8 * kgMaca;
+                System.out.printf("%.2f kg de maçã custa R$ %.2f", kgMaca, valorMaca);
+            }
+
+            else {
+                double valorMaca = 1.5 * kgMaca;
+
+                if (kgMaca > 8 || valorMaca > 25) {
+                    double desconto = valorMaca * 0.9;
+                    System.out.printf("%.2f kg de maçã custa R$ %.2f", kgMaca, desconto);
+                }
+
+                else {
+                    System.out.printf("%.2f kg de maçã custa R$ %.2f", kgMaca, valorMaca);
+                }
+            }
         }
 
         else {
