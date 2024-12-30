@@ -6,13 +6,18 @@ public class Ex001 {
         Scanner dados = new Scanner(System.in);
 
         System.out.println("Digite um número qualquer: ");
-        int num = dados.nextInt();
+        int n1 = dados.nextInt();
+        System.out.println("Digite um segundo numero: ");
+        int n2 = dados.nextInt();
 
-        if(num % 2 == 0) {
-            System.out.printf("O número %d é PAR.", num);
+        if(n1 > n2) {
+            System.out.printf("O número %d é maior que o %d.",n1, n2);
+        }
+        else if (n1 == n2) {
+            System.out.printf("O número %d é igual ao %d.",n1, n2);
         }
         else {
-            System.out.printf("O número %d é IMPAR.", num);
+            System.out.printf("O número %d é maior que o %d.",n2, n1);
         }
 
     }

@@ -92,7 +92,7 @@ public class Ex028 {
         else if (opcao == 3) {
             System.out.println("Quantos kg de Picanha você vai querer? ");
             float quant = scan.nextFloat();
-            
+
             // Até 5kg
             if (quant <= 5) {
                 double valor = 6.9 * quant;
