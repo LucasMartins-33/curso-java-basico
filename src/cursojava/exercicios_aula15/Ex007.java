@@ -12,32 +12,33 @@ public class Ex007 {
         System.out.println("Digite um terceiro número: ");
         int n3 = dados.nextInt();
 
+        // Maior
         if ( n1 > n2 && n1 > n3)  {
-            if (n2 > n3) {
-                System.out.printf("Maior: %d | Menor: %d", n1, n3);
-            }
-            else {
-                System.out.printf("Maior: %d | Menor: %d", n1, n2);
-            }
+            System.out.printf("Maior: %d ", n1);
         }
 
         else if (n2 > n1 && n2 > n3){
-            if (n1 > n3) {
-                System.out.printf("Maior: %d | Menor: %d", n2, n3);
-            }
-            else {
-                System.out.printf("Maior: %d | Menor: %d", n2, n1);
-            }
+            System.out.printf("Maior: %d ", n2);
         }
 
-        else {
-            if (n1 > n2) {
-                System.out.printf("Maior: %d | Menor: %d", n3, n2);
-            }
-            else {
-                System.out.printf("Maior: %d | Menor: %d", n3, n1);
-            }
+        else if(n3 > n1 && n3 > n2){
+            System.out.printf("Maior: %d ", n3);
         }
+
+        // Menor
+        if ( n1 < n2 && n1 < n3)  {
+            System.out.printf("Menor: %d ", n1);
+        }
+
+        else if (n2 < n1 && n2 < n3){
+            System.out.printf("Mrnor: %d ", n2);
+
+        }
+
+        else if(n3 < n1 && n3 < n2){
+            System.out.printf("Menor: %d ", n3);
+        }
+
 
     }
 }
