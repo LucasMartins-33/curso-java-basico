@@ -6,14 +6,13 @@ public class Ex004 {
         Scanner dados = new Scanner(System.in);
 
         System.out.println("digite uma letra qualquer: ");
-        char letra = dados.next().charAt(0); // Captura a primeira letra da entrada.
+        String letra = dados.next();
 
-        if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U' ||
-                letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
-            System.out.printf("A letra %c é uma vogal. ", letra);
+        if (letra.equalsIgnoreCase("a") || letra.equalsIgnoreCase("e") || letra.equalsIgnoreCase("i") || letra.equalsIgnoreCase("o") || letra.equalsIgnoreCase("u")) {
+            System.out.printf("A letra %s é uma vogal. ", letra);
         }
         else {
-            System.out.printf("A letra %c é uma consoante", letra);
+            System.out.printf("A letra %s é uma consoante", letra);
         }
     }
 }
