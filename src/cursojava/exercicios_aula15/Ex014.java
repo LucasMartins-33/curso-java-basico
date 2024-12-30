@@ -13,26 +13,41 @@ public class Ex014 {
          O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E. */
 
         Scanner dados = new Scanner(System.in);
+
         System.out.println("Digite sua n1: ");
         float n1 = dados.nextFloat();
+
         System.out.println("Digite a sua n2: ");
         float n2 = dados.nextFloat();
+
         double media = (n1 + n2) / 2;
+        String aproveitamento = "";
 
         if (media >= 9 && media <= 10) {
-            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = A\nSituação = Aprovado", n1, n2, media);
+            aproveitamento = "A";
         }
         else if (media >= 7.5 && media < 9) {
-            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = B\nSituação = Aprovado", n1, n2, media);
+            aproveitamento = "B";
         }
         else if (media >= 6 && media < 7.5) {
-            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = C\nSituação = Aprovado", n1, n2, media);
+            aproveitamento = "C";
         }
         else if (media >= 4 && media < 6) {
-            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = D\nSituação = Reprovado", n1, n2, media);
+            aproveitamento = "D";
         }
         else {
-            System.out.printf("N1 = %.2f\nN2 = %.2f\nMédia = %.1f\nConceito = E\nSituação = Reprovado", n1, n2, media);
+           aproveitamento = "E";
+        }
+        System.out.printf("Nota 01: %.1f \n", n1);
+        System.out.printf("Nota 02: %.1f \n", n2);
+        System.out.printf("Média: %.1f \n", media);
+        System.out.printf("Conceito: %s \n", aproveitamento);
+
+        if(aproveitamento.equals("A") || aproveitamento.equals("B") || aproveitamento.equals("C")) {
+            System.out.println("Situação: Aprovado. ");
+        }
+        else {
+            System.out.println("Situação: Reprovado. ");
         }
 
     }
