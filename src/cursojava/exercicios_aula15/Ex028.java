@@ -11,123 +11,64 @@ public class Ex028 {
         System.out.println("3 - Picanha");
         int opcao = scan.nextInt();
 
-        // File Duplo
+        System.out.println("Quantos kg você quer? ");
+        double quant = scan.nextDouble();
+
+        double precoKg = 0;
+
         if (opcao == 1) {
-            System.out.println("Quantos kg de File Duplo você vai querer? ");
-            float quant = scan.nextFloat();
 
-            // Até 5 kg
-            if (quant <= 5) {
-                double valor = 4.9 * quant;
-                System.out.println("A compra vai ser pelo cartão tabajara? [5% de desconto]");
-                System.out.println(" 1 - Sim");
-                System.out.println(" 2 - Não");
-                int resp = scan.nextInt();
-                if (resp == 1) {
-                    double desconto = valor * 0.95;
-                    System.out.printf("%.1f kg de File Duplo vai custar R$ %.2f", quant, desconto);
-                }
-                else {
-                    System.out.printf("%.1f kg de File Duplo vai custar R$ %.2f", quant, valor);
-                }
+            System.out.printf("%.1f kg - File Duplo\n", quant );
+
+            if(quant <= 5){
+                precoKg = 4.9;
             }
-
-            // Acima de 5kg
             else {
-                double valor = 5.8 * quant;
-                System.out.println("A compra vai ser pelo cartão tabajara? [5% de desconto]");
-                System.out.println(" 1 - Sim");
-                System.out.println(" 2 - Não");
-                int resp = scan.nextInt();
-                if (resp == 1) {
-                    double desconto = valor * 0.95;
-                    System.out.printf("%.1f kg de File Duplo vai custar R$ %.2f", quant, desconto);
-                }
-                else {
-                    System.out.printf("%.1f kg de File Duplo vai custar R$ %.2f", quant, valor);
-                }
+                precoKg = 5.8;
             }
         }
 
-        // Alcatra
         else if (opcao == 2) {
-            System.out.println("Quantos kg de Alcatra você vai querer? ");
-            float quant = scan.nextFloat();
 
-            // Até 5kg
+            System.out.printf("%.1f kg - Alcatra\n", quant );
+
             if (quant <= 5) {
-                double valor = 5.9 * quant;
-                System.out.println("A compra vai ser pelo cartão tabajara? [5% de desconto]");
-                System.out.println(" 1 - Sim");
-                System.out.println(" 2 - Não");
-                int resp = scan.nextInt();
-                if(resp == 1) {
-                    double desconto = valor * 0.95;
-                    System.out.printf("%.1f kg de Alcatra vai custar R$ %.2f", quant, desconto);
-                }
-                else {
-                    System.out.printf("%.1f kg de Alcatra vai custar R$ %.2f", quant, valor);
-                }
-
+                precoKg = 5.9;
             }
-
-            // Acima 5kg
             else {
-                double valor = 6.8 * quant;
-                System.out.println("A compra vai ser pelo cartão tabajara? [5% de desconto]");
-                System.out.println(" 1 - Sim");
-                System.out.println(" 2 - Não");
-                int resp = scan.nextInt();
-                if (resp == 1) {
-                    double desconto = valor * 0.95;
-                    System.out.printf("%.1f kg de Alcatra vai custar R$ %.2f", quant, desconto);
-                }
-                else {
-                    System.out.printf("%.1f kg de Alcatra vai custar R$ %.2f", quant, valor);
-                }
+                precoKg = 6.8;
             }
         }
 
-        // Picanha
         else if (opcao == 3) {
-            System.out.println("Quantos kg de Picanha você vai querer? ");
-            float quant = scan.nextFloat();
 
-            // Até 5kg
+            System.out.printf("%.1f kg - Picanha\n", quant );
+
             if (quant <= 5) {
-                double valor = 6.9 * quant;
-                System.out.println("A compra vai ser pelo cartão tabajara? [5% de desconto]");
-                System.out.println(" 1 - Sim");
-                System.out.println(" 2 - Não");
-                int resp = scan.nextInt();
-                if (resp == 1) {
-                    double desconto = valor * 0.95;
-                    System.out.printf("%.1f kg de Picanha vai custar R$ %.2f", quant, desconto);
-                }
-                else {
-                    System.out.printf("%.1f kg de Picanha vai custar R$ %.2f", quant, valor);
-                }
+                precoKg = 6.9;
             }
-
-            // Acima de 5kg
             else {
-                double valor = 7.8 * quant;
-                System.out.println("A compra vai ser pelo cartão tabajara? [5% de desconto]");
-                System.out.println(" 1 - Sim");
-                System.out.println(" 2 - Não");
-                int resp = scan.nextInt();
-                if (resp == 1) {
-                    double desconto = valor * 0.95;
-                    System.out.printf("%.1f kg de Picanha vai custar R$ %.2f", quant, desconto);
-                }
-                else {
-                    System.out.printf("%.1f kg de Picanha vai custar R$ %.2f", quant, valor);
-                }
+                precoKg = 7.8;
             }
         }
 
+        double total = precoKg * quant;
+        System.out.printf("Custa R$ %.2f sem desconto\n", total);
+
+        System.out.println("Você vai pagar no cartão Tabajara (5% de desconto)? 1 = Sim / 2 = Não\n");
+        int cartao = scan.nextInt();
+
+        double desconto = 0;
+        if (cartao == 1) {
+            desconto = total * 0.05;
+            total = total * 0.95;
+
+            System.out.printf("O valor total é de R$ %.2f com desconto de R$ %.2f.\n", total, desconto);
+        }
         else {
-            System.out.println("Opção inválida. ");
+            System.out.printf("O valor total é de R$ %.2f sem desconto.\n");
         }
     }
 }
+
+
