@@ -3,18 +3,18 @@ import java.util.Scanner;
 
 public class Ex004 {
     public static void main (String[] arg) {
-        Scanner scan = new Scanner(System.in);
 
-        do {
-            double paisA = 80000;
-            double populacaoTotalA = paisA * 1.03;
+        double popA = 80000;
+        double popB = 200000;
+        int cont = 0;
 
-            double paisB = 200000;
-            double populacaoTotalB = paisB * 1.015;
-        }while ();
-
-
-
-
+        while (popA < popB) {
+            popA += (popA * 0.03);
+            popB += (popB * 0.015);
+            cont += 1;
+        }
+        System.out.printf("População A: %.1f\n", popA);
+        System.out.printf("População B: %.1f\n", popB);
+        System.out.printf("%d anos", cont);
     }
 }
