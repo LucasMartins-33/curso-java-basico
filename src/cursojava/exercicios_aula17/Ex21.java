@@ -12,7 +12,7 @@ public class Ex21 {
         for (int cont = 2; cont < num; cont++) {
 
             if (num % cont == 0) {
-                System.out.println("Não é primo.");
+                System.out.printf("Não é primo - divisível por %d\n", cont);
                 primo = false;
                 // break;
             }
