@@ -1,6 +1,6 @@
 package cursojava.exercicios_aula17;
 import java.util.Scanner;
-public class Ex21 {
+public class Ex021 {
     public static void main(String[] arg){
         Scanner scan = new Scanner(System.in);
 
