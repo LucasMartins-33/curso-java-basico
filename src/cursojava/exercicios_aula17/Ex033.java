@@ -6,7 +6,9 @@ public class Ex033 {
 
         int cont = 0;
         double total = 0;
-        double maior, menor;
+        double maior = Double.MIN_VALUE;
+        double menor = Double.MAX_VALUE;
+
         boolean sair = false;
 
         do {
@@ -17,7 +19,17 @@ public class Ex033 {
                 System.out.println("Insira a temperatura: ");
                 double temp = scan.nextDouble();
                 cont += 1;
+
+
+                if (temp > maior) {
+                    maior = temp;
+                }
+                if (temp < menor) {
+                    menor = temp;
+                }
+
                 total += temp;
+
                 sair = false;
             }
             else if (resp.equalsIgnoreCase("n")) {
@@ -28,8 +40,10 @@ public class Ex033 {
 
         double media = total / cont;
 
+        System.out.printf("A média das temperaturas foi de %.1f C°\n", media);
+        System.out.printf("A maior temperatura foi de %.1f C°\n", maior);
+        System.out.printf("A menor temperatura foi de %.1f C°\n", menor);
         System.out.println("Finalizado");
-        System.out.println("media" + media);
 
     }
 }
