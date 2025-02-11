@@ -8,11 +8,20 @@ public class Ex036 {
         System.out.println("Qual a tabuada você quer fazer? ");
         int tabuada = scan.nextInt();
 
-        System.out.println("Começar por: ");
-        int inicio = scan.nextInt();
+        int inicio, fim = scan.nextInt();
+        boolean invalido = false;
 
-        System.out.println("Terminar em: ");
-        int fim = scan.nextInt();
+        do {
+            System.out.println("Começar por: ");
+            inicio = scan.nextInt();
+
+            System.out.println("Terminar em: ");
+            fim = scan.nextInt();
+
+            if (fim < inicio) {
+                invalido = true;
+            }
+        } while (!invalido);
 
         System.out.printf("Vou montar a tabuada de %d começando em %d e terminando em %d:\n",tabuada, inicio, fim);
 
@@ -22,6 +31,5 @@ public class Ex036 {
             mult = tabuada * cont;
             System.out.printf("%d X %d = %d\n", tabuada, cont, mult);
         }
-
     }
 }
