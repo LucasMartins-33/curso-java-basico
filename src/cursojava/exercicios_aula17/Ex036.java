@@ -8,8 +8,8 @@ public class Ex036 {
         System.out.println("Qual a tabuada você quer fazer? ");
         int tabuada = scan.nextInt();
 
-        int inicio, fim = scan.nextInt();
-        boolean invalido = false;
+        int inicio, fim;
+        boolean validacao;
 
         do {
             System.out.println("Começar por: ");
@@ -19,13 +19,19 @@ public class Ex036 {
             fim = scan.nextInt();
 
             if (fim < inicio) {
-                invalido = true;
+                validacao = false;
+                System.out.println("Valor invalido! O fim deve ser maior ou igual ao início.\n");
             }
-        } while (!invalido);
+
+            else {
+                validacao = true;
+            }
+
+        } while (!validacao); //Con
 
         System.out.printf("Vou montar a tabuada de %d começando em %d e terminando em %d:\n",tabuada, inicio, fim);
 
-        int mult = 0;
+        int mult;
 
         for (int cont = inicio; cont <= fim; cont++) {
             mult = tabuada * cont;
