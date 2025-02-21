@@ -1,6 +1,5 @@
 package cursojava.exercicios_aula17;
 import java.text.DecimalFormat;
-import java.util.Scanner;
 public class Ex038 {
     public static void main(String[] arg) {
         double salario = 1000; //95
