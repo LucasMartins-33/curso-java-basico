@@ -1,7 +1,7 @@
 package cursojava.exercicios_aula19;
 import java.util.Scanner;
-public class Ex006 {
-    public static void main(String[] agr){
+public class Ex007 {
+    public static void main(String[] arg){
         Scanner scan = new Scanner(System.in);
 
         int[] vetorA = new int[10];
@@ -15,7 +15,7 @@ public class Ex006 {
             System.out.printf("Insira o valor no vetor B, na posição %d: ",j);
             vetorB[i] = scan.nextInt();
 
-            vetorC[i] = vetorA[i] + vetorB[i];
+            vetorC[i] = vetorA[i] - vetorB[i];
         }
 
         System.out.print("Vetor A = ");
@@ -36,5 +36,6 @@ public class Ex006 {
         for (int valorC : vetorC){
             System.out.print(valorC + " ");
         }
+
     }
 }
