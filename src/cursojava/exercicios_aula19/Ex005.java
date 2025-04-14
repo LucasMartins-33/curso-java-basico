@@ -15,6 +15,16 @@ public class Ex005 {
         }
 
         System.out.print("Vetor A = ");
+        for (int valorA : vetorA){
+            System.out.print(valorA + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Vetor B = ");
+        for (int valorB : vetorB){
+            System.out.print(valorB + " ");
+        }
 
 
     }
