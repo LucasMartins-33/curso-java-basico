@@ -88,6 +88,5 @@ public class Ex004 {
         }
 
         System.out.println("fim");
-        
     }
 }
