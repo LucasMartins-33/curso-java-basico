@@ -56,23 +56,22 @@ public class Ex006 {
                 }
 
             }
-        }
+            linha--;
+            coluna--;
+            if (jogoVelha[linha][coluna] == 'X' || jogoVelha[linha][coluna] == 'O'){
+                System.out.println("Posição já usada, tete novamenter.");
+            }
+            else {
+                jogoVelha[linha][coluna] =  sinal;
+                jogada++;
+            }
 
-        linha--;
-        coluna--;
-        if (jogoVelha[linha][coluna] == 'X' || jogoVelha[linha][coluna] == 'O'){
-            System.out.println("Posição já usada, tete novamenter.");
-        }
-        else {
-            jogoVelha[linha][coluna] =  sinal;
-            jogada++;
-        }
-
-        for (int i = 0; i < jogoVelha.length; i++){
-            for (int j = 0; j < jogoVelha[i].length; j++){
-                System.out.println(jogoVelha[i][j]);
+            for (int i = 0; i < jogoVelha.length; i++){
+                for (int j = 0; j < jogoVelha[i].length; j++){
+                    System.out.print(jogoVelha[i][j] + " ");
+                }
+                System.out.println();
             }
         }
-        System.out.println();
     }
 }
