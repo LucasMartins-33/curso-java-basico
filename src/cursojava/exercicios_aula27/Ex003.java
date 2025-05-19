@@ -1,6 +1,6 @@
 package cursojava.exercicios_aula27;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Ex003 {
@@ -29,8 +29,18 @@ public class Ex003 {
             for (int j = 0; j < aluno.notas[i].length; j++){
                 System.out.printf("Entre com a nota %d: ", j + 1);
                 aluno.notas[i][j] = scan.nextDouble();
+
             }
         }
         aluno.mostraInfo();
+
+        for (int i = 0; i < aluno.disciplinas.length; i++){
+            if (aluno.verificarAprovacao(i)){
+                System.out.printf("Disciplina %s - foi Aprovado. \n",aluno.disciplinas[i]);
+            }
+            else {
+                System.out.printf("Disciplina %s - foi Reprovado. \n",aluno.disciplinas[i]);
+            }
+        }
     }
 }
