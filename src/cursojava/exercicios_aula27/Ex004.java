@@ -30,7 +30,9 @@ public class Ex004 {
             linha = valor("Linha", scan);
             coluna = valor("Coluna", scan);
 
-            jogoDaVelha.validarJogada(linha, coluna, sinal);
+            if (!jogoDaVelha.validarJogada(linha, coluna, sinal)){
+                System.out.println("Posição já usada, tente novamente. ");
+            };
 
             jogoDaVelha.imprimirTabueiro();
 
