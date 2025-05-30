@@ -12,7 +12,7 @@ public class Lampada {
 
     boolean ligada;
 
-    /* Vai ser um metodo que vai executar uma logica de programação mas
+    /* Vai ser um metodo que vai executar uma lógica de programação, mas
      não vai executar nada, portanto usaremos o metodo void */
 
     void ligar(){
