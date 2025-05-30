@@ -13,6 +13,7 @@ public class Lampada {
     private boolean tipoAbajur;
     private boolean ligada;
 
+    // Construtores
     public Lampada() {
     }
 
@@ -28,6 +29,7 @@ public class Lampada {
         this.modelo = modelo;
     }
 
+    // Métodos get e set
     public boolean isLigada() {
         return ligada;
     }
