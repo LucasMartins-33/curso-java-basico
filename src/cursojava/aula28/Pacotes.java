@@ -1,7 +1,7 @@
 package cursojava.aula28;
 import cursojava.aula27.Carro;
-import cursojava.exercicios_aula20.Ex005;
-import cursojava.exercicios_aula20.Ex006;
+import cursojava.aula20.exercicios_aula20.Ex005;
+import cursojava.aula20.exercicios_aula20.Ex006;
 
 
 public class Pacotes {
