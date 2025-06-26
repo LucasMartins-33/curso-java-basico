@@ -5,14 +5,6 @@ public class Professor extends Pessoa {
     private double salario;
     private String nomeCurso;
 
-    public void verificarAcesso(){
-
-        this.nomeVisibilidade = "teste";
-        super.nomeVisibilidade = "teste";
-
-        this.setNomeVisibilidade("teste");
-    }
-
     public double getSalario() {
         return salario;
     }

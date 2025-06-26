@@ -61,14 +61,6 @@ public abstract class Pessoa {
         this.telefoneCelular = telefoneCelular;
     }
 
-    public String getNomeVisibilidade() {
-        return nomeVisibilidade;
-    }
-
-    public void setNomeVisibilidade(String nomeVisibilidade) {
-        this.nomeVisibilidade = nomeVisibilidade;
-    }
-
     public abstract String obterEtiquetaEndereco();
 
     public abstract void imprimirEtiquetaEndereco();
