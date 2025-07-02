@@ -1,6 +1,5 @@
 package cursojava.aula43.exercicio.ex001;
 
-import java.util.Scanner;
 
 public class ContaPoupanca extends ContaBancaria{
 
@@ -14,9 +13,6 @@ public class ContaPoupanca extends ContaBancaria{
         this.diaRendimento = diaRendimento;
     }
 
-    public ContaPoupanca(double saldo){
-        super(saldo);
-    }
 
     public double getDiaRendimento() {return diaRendimento;}
 
@@ -24,12 +20,13 @@ public class ContaPoupanca extends ContaBancaria{
         this.diaRendimento = diaRendimento;
     }
 
-    public double taxaRendimento(){
-        Scanner scan = new Scanner(System.in);
+    public double calcularNovoSaldo(){
 
-        double taxa =  0.05;
+        double taxa = 0.05;
+        double saldoAtual = getSaldo();
+        double novoSaldo = saldoAtual + (saldoAtual * taxa);
+        setSaldo(novoSaldo);
 
-        setSaldo(saldo * taxa);
-
+        return novoSaldo;
     }
 }
