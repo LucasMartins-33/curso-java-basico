@@ -1,6 +1,6 @@
 package cursojava.aula43.exercicio.ex001;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ContaBancaria {
 
@@ -33,27 +33,34 @@ public class ContaBancaria {
 
 
 
-    public double saqar(){
+    public double sacar(double valorSaque){
 
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
 
         System.out.println("Digite o valor do saque");
         double valorSaque = scan.nextDouble();
+        */
+
+
 
         if (valorSaque > saldo){
             System.out.println("Saldo insuficiente para sacar. ");
+
+            return 0;
         } else{
-            System.out.println("Saque realizado com sucesso! ");
             saldo -= valorSaque;
+            System.out.println("Saque realizado com sucesso! ");
+
         }
         return valorSaque;
     }
 
-    public double depositar(){
-        Scanner scan = new Scanner(System.in);
+    public double depositar(double valorDeposito){
+        /*Scanner scan = new Scanner(System.in);
 
         System.out.println("Digite o valor do deposito: ");
         double valorDeposito = scan.nextDouble();
+        */
 
         if(valorDeposito <= 0){
             System.out.println("Erro.\nValor incorreto.");
