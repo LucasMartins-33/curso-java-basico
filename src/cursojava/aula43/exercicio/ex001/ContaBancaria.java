@@ -1,4 +1,4 @@
-package cursojava.aula43.exercicio;
+package cursojava.aula43.exercicio.ex001;
 
 import java.util.Scanner;
 
