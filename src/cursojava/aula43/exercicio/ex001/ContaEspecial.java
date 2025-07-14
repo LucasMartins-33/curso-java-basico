@@ -25,11 +25,12 @@ public class ContaEspecial extends ContaBancaria {
 
             return 0;
         } else {
+            //Faz o saldo ser alterado já com o limite usado
             setSaldo(saldo - valorSaque);
 
             if (valorSaque > saldo){
                 System.out.println("Saque realizado usando o limite. ");
-                
+
             } else{
                 System.out.println("Saque realizado com saldo disponível. ");
             }
