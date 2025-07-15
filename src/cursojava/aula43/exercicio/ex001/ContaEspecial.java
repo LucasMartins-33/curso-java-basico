@@ -16,6 +16,15 @@ public class ContaEspecial extends ContaBancaria {
 
     public void setLimite(double limite) {this.limite = limite;}
 
+    @Override
+    public String toString() {
+        return "---- Dados da Conta Especial ----\n" +
+                "Nome do Cliente: " + getNomeCliente() + "\n" +
+                "Número da Conta: " + getNumConta() + "\n" +
+                "Saldo: R$ " + String.format("%.2f", getSaldo()) + "\n" +
+                "Limite de Crédito: R$ " + String.format("%.2f",limite);
+    }
+
     public double sacar(double valorSaque) {
         double saldo = getSaldo();
         double limiteDisponivel = getLimite();

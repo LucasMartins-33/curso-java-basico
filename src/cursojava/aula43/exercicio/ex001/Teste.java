@@ -91,6 +91,8 @@ public class Teste {
                     break;
 
                 case 4:
+                    /*
+
                     System.out.println("------Dados do cliente------");
                     System.out.println();
 
@@ -101,6 +103,11 @@ public class Teste {
 
                         System.out.println("Limite de crédito: " + (((ContaEspecial) conta).getLimite()));
                     }
+
+                    */
+
+                    System.out.println(conta);
+
                     break;
 
                     case 5:

@@ -20,6 +20,15 @@ public class ContaPoupanca extends ContaBancaria{
         this.diaRendimento = diaRendimento;
     }
 
+    @Override
+    public String toString() {
+        return "---- Dados da Conta Poupança ----\n" +
+                "Nome do Cliente: " + getNomeCliente() + "\n" +
+                "Numero da Conta: " + getNumConta() + "\n" +
+                "Saldo: R$ " + String.format("%.2f", getSaldo()) + "\n" +
+                "Dias de Rendimento " + getDiaRendimento();
+    }
+
     public double calcularNovoSaldo(){
 
         double taxa = 0.05;
