@@ -32,5 +32,5 @@ public class Contribuinte {
                 "Nome: " + nome + "\n" +
                 "Renda Bruta: R$ " + String.format("%.2f", rendaBruta);
     }
-    
+
 }
