@@ -24,9 +24,12 @@ public class ContaPoupanca extends ContaBancaria{
 
         double taxa = 0.05;
         double saldoAtual = getSaldo();
-        double novoSaldo = saldoAtual + (saldoAtual * taxa);
-        setSaldo(novoSaldo);
+        double dias = getDiaRendimento();
 
+        double rendimento = saldoAtual * taxa * diaRendimento;
+        double novoSaldo = saldoAtual + rendimento;
+
+        setSaldo(novoSaldo);
         return novoSaldo;
     }
 }

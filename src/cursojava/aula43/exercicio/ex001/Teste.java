@@ -79,7 +79,10 @@ public class Teste {
 
                 case 3:
                     if (conta instanceof ContaPoupanca) {
-                        ContaPoupanca cp = new ContaPoupanca();
+                        ContaPoupanca cp = (ContaPoupanca) conta;
+                        System.out.println("Quantos dias o dinheiro ficou guardado? ");
+                        cp.setDiaRendimento(scan.nextDouble());
+
                         double novosaldo = cp.calcularNovoSaldo();
                         System.out.println("Novo saldo com rendimento: " + novosaldo);
                     } else {
