@@ -8,10 +8,6 @@ public class PessoaJuridica extends Contribuinte {
 
     }
 
-    public PessoaJuridica(String cnpj) {
-        this.cnpj = cnpj;
-    }
-
     public String getCnpj() {
         return cnpj;
     }

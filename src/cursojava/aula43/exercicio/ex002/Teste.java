@@ -40,7 +40,7 @@ public class Teste {
         }
 
         if (contribuinte != null) {
-            
+
             System.out.println("Informe o seu nome: ");
             contribuinte.setNome(scan.nextLine());
 
