@@ -13,6 +13,15 @@ public class Animal {
 
     }
 
+    public Animal(String nome, int comprimento, int patas, String cor, String ambiente, double velocidade) {
+        this.nome = nome;
+        this.comprimento = comprimento;
+        this.patas = patas;
+        this.cor = cor;
+        this.ambiente = ambiente;
+        this.velocidade = velocidade;
+    }
+
     public String getNome() {
         return nome;}
 
@@ -62,11 +71,12 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal: " + nome + "\n" +
-                "Comprimento: " + comprimento + "\n" +
+        return "-------- Zoo --------\n" +
+                "Animal: " + nome + "\n" +
+                "Comprimento: " + comprimento +  " cm" + "\n" +
                 "Patas: " + patas + "\n" +
                 "Cor: " + cor + "\n" +
                 "Ambiente: " + ambiente + "\n" +
-                "Velocidade: " + velocidade;
+                "Velocidade: " + velocidade + " m/s";
     }
 }

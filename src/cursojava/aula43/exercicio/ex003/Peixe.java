@@ -19,11 +19,11 @@ public class Peixe extends Animal {
     public String toString() {
         return "-------- Zoo --------\n" +
                 "Animal: " + getNome() + "\n" +
-                "Comprimento: " + getComprimento() + "\n" +
+                "Comprimento: " + getComprimento() +  " cm" + "\n" +
                 "Patas: " + getPatas() + "\n" +
                 "Cor: " + getCor() + "\n" +
                 "Ambiente: " + getAmbiente() + "\n" +
-                "Velocidade: " + getVelocidade() + "\n" +
+                "Velocidade: " + getVelocidade() + " m/s" + "\n" +
                 "Caracteristicas: " + getCaracteristicas();
 
     }
