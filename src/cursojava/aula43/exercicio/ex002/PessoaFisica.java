@@ -35,7 +35,7 @@ public class PessoaFisica extends Contribuinte {
         return "---- Dados da Pessoa Jurídica ----\n" +
                 "Nome: " + getNome() + "\n" +
                 "CNPJ:  " + cpf + "\n" +
-                "Renda Bruta: R$ " + String.format("%.2f", getRendaBruta()) +
+                "Renda Bruta: R$ " + String.format("%.2f", getRendaBruta()) + "\n" +
                 "Imposto: R$ " + String.format("%.2f", calcularImposto());
     }
 }
