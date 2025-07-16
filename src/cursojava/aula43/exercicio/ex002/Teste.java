@@ -39,14 +39,15 @@ public class Teste {
                 System.out.println("Opção inválida! Encerrando o programa... ");
         }
 
-        System.out.println("Informe o seu nome: ");
-        contribuinte.setNome(scan.nextLine());
+        if (contribuinte != null) {
+            
+            System.out.println("Informe o seu nome: ");
+            contribuinte.setNome(scan.nextLine());
 
-        System.out.println("Informe a sua renda bruta: ");
-        contribuinte.setRendaBruta(scan.nextDouble());
+            System.out.println("Informe a sua renda bruta: ");
+            contribuinte.setRendaBruta(scan.nextDouble());
 
-        System.out.println(contribuinte);
-
-
+            System.out.println(contribuinte);
+        }
     }
 }
