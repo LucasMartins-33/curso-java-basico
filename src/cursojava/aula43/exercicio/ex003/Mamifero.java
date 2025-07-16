@@ -3,8 +3,11 @@ package cursojava.aula43.exercicio.ex003;
 public class Mamifero extends Animal{
 
     public Mamifero() {
-
+        this.setAmbiente("Terra");
+        this.setCor("Castanho");
+        this.alimento = "Mel";
     }
+
 
     private String alimento;
 
@@ -24,7 +27,7 @@ public class Mamifero extends Animal{
                 "Cor: " + getCor() + "\n" +
                 "Ambiente: " + getAmbiente() + "\n" +
                 "Velocidade: " + getVelocidade() + " m/s" + "\n" +
-                "Caracteristicas: " + getAlimento();
+                "Alimento: " + getAlimento();
 
     }
 }

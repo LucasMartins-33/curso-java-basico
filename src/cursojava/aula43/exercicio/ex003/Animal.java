@@ -10,16 +10,7 @@ public class Animal {
     private double velocidade;
 
     public Animal() {
-
-    }
-
-    public Animal(String nome, int comprimento, int patas, String cor, String ambiente, double velocidade) {
-        this.nome = nome;
-        this.comprimento = comprimento;
-        this.patas = patas;
-        this.cor = cor;
-        this.ambiente = ambiente;
-        this.velocidade = velocidade;
+        this.patas = 4;
     }
 
     public String getNome() {
