@@ -9,6 +9,10 @@ public class Animal {
     private String ambiente;
     private double velocidade;
 
+    public Animal() {
+
+    }
+
     public String getNome() {
         return nome;}
 
@@ -55,4 +59,6 @@ public class Animal {
     public void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
     }
+
+
 }
