@@ -16,5 +16,5 @@ public class Peixe {
         this.caracteristicas = caracteristicas;
     }
 
-    
+
 }
