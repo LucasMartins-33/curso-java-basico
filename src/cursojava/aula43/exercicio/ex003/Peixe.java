@@ -1,6 +1,6 @@
 package cursojava.aula43.exercicio.ex003;
 
-public class Peixe {
+public class Peixe extends Animal {
 
     private String caracteristicas;
 
@@ -16,5 +16,16 @@ public class Peixe {
         this.caracteristicas = caracteristicas;
     }
 
+    public String toString() {
+        return "-------- Zoo --------\n" +
+                "Animal: " + getNome() + "\n" +
+                "Comprimento: " + getComprimento() + "\n" +
+                "Patas: " + getPatas() + "\n" +
+                "Cor: " + getCor() + "\n" +
+                "Ambiente: " + getAmbiente() + "\n" +
+                "Velocidade: " + getVelocidade() + "\n" +
+                "Caracteristicas: " + getCaracteristicas();
+
+    }
 
 }

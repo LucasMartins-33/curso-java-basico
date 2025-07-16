@@ -1,6 +1,6 @@
 package cursojava.aula43.exercicio.ex003;
 
-public class Mamifero {
+public class Mamifero extends Animal{
 
     public Mamifero() {
 
@@ -14,5 +14,17 @@ public class Mamifero {
 
     public void setAlimento(String alimento) {
         this.alimento = alimento;
+    }
+
+    public String toString() {
+        return "-------- Zoo --------\n" +
+                "Animal: " + getNome() + "\n" +
+                "Comprimento: " + getComprimento() + "\n" +
+                "Patas: " + getPatas() + "\n" +
+                "Cor: " + getCor() + "\n" +
+                "Ambiente: " + getAmbiente() + "\n" +
+                "Velocidade: " + getVelocidade() + "\n" +
+                "Caracteristicas: " + getAlimento();
+
     }
 }

@@ -52,7 +52,7 @@ public class Animal {
         this.ambiente = ambiente;
     }
 
-    public double valocidade() {
+    public double getVelocidade() {
         return velocidade;
     }
 
@@ -60,5 +60,13 @@ public class Animal {
         this.velocidade = velocidade;
     }
 
-
+    @Override
+    public String toString() {
+        return "Animal: " + nome + "\n" +
+                "Comprimento: " + comprimento + "\n" +
+                "Patas: " + patas + "\n" +
+                "Cor: " + cor + "\n" +
+                "Ambiente: " + ambiente + "\n" +
+                "Velocidade: " + velocidade;
+    }
 }
