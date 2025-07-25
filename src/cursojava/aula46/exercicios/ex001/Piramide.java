@@ -5,6 +5,7 @@ public class Piramide extends Figura3D{
     private double altura;
     private double arestaBase;
     private double apotema;
+    private int numPOliBase;
 
     private Figura2D base;
 
@@ -38,5 +39,34 @@ public class Piramide extends Figura3D{
 
     public void setBase(Figura2D base) {
         this.base = base;
+    }
+
+    public int getNumPOliBase() {
+        return numPOliBase;
+    }
+
+    public void setNumPOliBase(int numPOliBase) {
+        this.numPOliBase = numPOliBase;
+    }
+
+    @Override
+    public double calcularArea() {
+
+        if (base != null) {
+            double areaBase = base.calcularArea();
+            double areaLateral = numPOliBase * ((areaBase * apotema) / 2);
+
+            return areaBase + areaLateral;
+        }
+        return 0;
+    }
+
+    @Override
+    public double calcularVolume() {
+
+        if (base != null) {
+            return (base.calcularArea() * altura) / 3;
+        }
+        return 0;
     }
 }
